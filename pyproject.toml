@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "random-recipe-bot-v2"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = "^20.8"
+sqlalchemy = "^2.0.27"
+alembic = "^1.13.1"
+black = "^24.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+exclude = '''
+/(
+    \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | \.svn
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+'''
